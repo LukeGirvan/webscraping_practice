@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-# Scraping a dummy site to practice extracting data from websites
+# Scraping a site to practice extracting data from websites
 
 def scrape_country_data():
     # Send a GET request to the website
