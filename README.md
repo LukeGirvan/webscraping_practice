@@ -13,5 +13,5 @@ This Python script demonstrates web scraping techniques using the requests libra
 ### Error Handling
 If the GET request fails (status code other than 200), the script prints a message indicating the failure.
 Note
-This code is intended for educational purposes and practice in web scraping. Always respect the website's terms of service and robots.txt file when scraping data from websites, and consider the legality and ethics of web scraping in any specific context.
+This code is intended practice in web scraping. Always respect the website's terms of service and robots.txt file when scraping data from websites, and consider the legality and ethics of web scraping in any specific context.
 
