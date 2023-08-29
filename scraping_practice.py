@@ -2,9 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 # Scraping a dummy site to practice extracting data from websites
 
-import requests
-from bs4 import BeautifulSoup
-
 def scrape_country_data():
     # Send a GET request to the website
     url = "https://www.scrapethissite.com/pages/simple/"
