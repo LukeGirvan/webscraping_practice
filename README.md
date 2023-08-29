@@ -1,1 +1,2 @@
 # webscraping_practice
+This is just me documenting my python journey in this code i am scraping a dummy website that has information on country size, population and the capitals of them. So i used beautifulsoup and requests to parse the html for the tags and when it found those i put the data into dictionaries as key value pairs such as: Country: capital, Country: area and Country: population and i sorted the population and area dictionaries by the values so it will show the countries with the lowest population and lowest km2 area in order from lowest-highest.
