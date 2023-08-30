@@ -1,17 +1,33 @@
 # Web Scraping Practice: Country Data Extraction
-This Python script demonstrates web scraping techniques using the requests library to make HTTP requests and BeautifulSoup for parsing HTML content. The goal is to extract data from a sample website and organize it into dictionaries for further analysis.
+This Python script demonstrates web scraping techniques using the requests library to make HTTP requests and BeautifulSoup for parsing HTML content. The goal is to extract data from a sample website and put it into a pandas dataframe for further analysis.
 
 ## Code Explanation
-- The script begins by sending a GET request to the specified URL and checks if the request was successful (HTTP status code 200).
+This script performs the following tasks:
 
-- It then uses BeautifulSoup to parse the HTML content of the webpage and extracts data by finding elements with specific CSS classes.
+-Sends a GET request to the specified website: ScrapeThisSite Simple Page.
 
-- The extracted data is stored in dictionaries where the country name serves as the key and the respective data (capital, population, or area) serves as the value.
+-Parses the HTML content of the page using BeautifulSoup.
 
-- Finally, the script prints the extracted data and sorts the data based on population and area for further analysis.
+-Extracts data from elements with the following classes:
+country-name: Country names.
+country-capital: Capital cities.
+country-population: Population figures.
+country-area: Country areas in square kilometers.
+
+-Creates a Pandas DataFrame to store the extracted data, with columns named appropriately: "Country Name," "Capital," "Population," and "Area(km2)."
+
+-Returns the Pandas DataFrame containing the extracted data.
 
 ### Error Handling
-If the GET request fails (status code other than 200), the script prints a message indicating the failure.
-Note
-This code is intended practice in web scraping. Always respect the website's terms of service and robots.txt file when scraping data from websites, and consider the legality and ethics of web scraping in any specific context.
+If the script fails to retrieve the webpage (HTTP status code other than 200), it will print "Failed to retrieve the webpage" and return None.
+
+Ensure that you respect the website's terms of service and policies while scraping data from it.
+
+This script serves as a basic example of web scraping for educational purposes. For more complex and real-world scenarios, consider using more robust tools and handling potential issues like exceptions and error handling.
+
+
+
+
+
+
 
