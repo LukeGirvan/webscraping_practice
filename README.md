@@ -1,29 +1,28 @@
-# Web Scraping Practice: Country Data Extraction
-This Python script demonstrates web scraping techniques using the requests library to make HTTP requests and BeautifulSoup for parsing HTML content. The goal is to extract data from a sample website and put it into a pandas dataframe for further analysis.
+# Data Scraping and Transformation Script
+This Python script utilizes Selenium to scrape data from two distinct websites, transforming it into Pandas DataFrames, and subsequently exporting the data into CSV files. Additionally, it includes functionality to push the generated CSV files to an AWS (Amazon Web Services) S3 bucket. While this script may not necessarily be intended for general use, it serves as a practical example of web scraping and data processing.
 
-## Code Explanation
-This script performs the following tasks:
+## Overview
+The script performs the following actions:
 
--Sends a GET request to the specified website: ScrapeThisSite Simple Page.
+-Web Scraping:
 
--Parses the HTML content of the page using BeautifulSoup.
+-Utilizes Selenium to scrape data from two websites.
+The first website, "https://www.scrapethissite.com/pages/simple/", is used to obtain information on country size, population, capital, and area.
+The second website, "https://en.wikipedia.org/wiki/List_of_countries_by_coffee_production", is used to retrieve data on coffee production by country.
+Data Transformation:
 
--Extracts data from elements with the following classes:
-country-name: Country names.
-country-capital: Capital cities.
-country-population: Population figures.
-country-area: Country areas in square kilometers.
+-For each website, the scraped data is organized into separate Pandas DataFrames.
+The first DataFrame contains information about country size and population, with columns: "Country Name," "Capital," "Population," and "Area(km2)."
+The second DataFrame contains data on coffee production, with columns: "Rank," "Country Name," "Bags Made," "Tonnes," and "Pounds."
+CSV File Creation:
 
--Creates a Pandas DataFrame to store the extracted data, with columns named appropriately: "Country Name," "Capital," "Population," and "Area(km2)."
+-The script creates two CSV files in the local directory:
+CountrySizePopData.csv for the country size and population data.
+CountryCoffeeData.csv for the coffee production data.
 
--Returns the Pandas DataFrame containing the extracted data.
+-AWS Integration (Optional):
+I then uploaded the csv files to an amazon AWS S3 Bucket to practice pushing the data gained from the code to the cloud.
 
-### Error Handling
-If the script fails to retrieve the webpage (HTTP status code other than 200), it will print "Failed to retrieve the webpage" and return None.
-
-Ensure that you respect the website's terms of service and policies while scraping data from it.
-
-This script serves as a basic example of web scraping for educational purposes. For more complex and real-world scenarios, consider using more robust tools and handling potential issues like exceptions and error handling.
 
 
 
